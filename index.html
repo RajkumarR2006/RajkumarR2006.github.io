@@ -31,4 +31,254 @@
             content: '';
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.08), transparent 25%);
+            z-index: -1;
+        }
+
+        h1, h2, h3 { font-weight: 700; letter-spacing: -0.5px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- Header Section --- */
+        header { 
+            min-height: 90vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: flex-start; 
+            padding: 0 10%; 
+            position: relative;
+        }
+
+        .hero-tag {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 { 
+            font-size: 4rem; 
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle { 
+            font-size: 1.5rem; 
+            color: var(--text-muted); 
+            max-width: 600px; 
+            margin-bottom: 2rem;
+        }
+
+        .btn-group { display: flex; gap: 1rem; }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn:hover { background: rgba(56, 189, 248, 0.1); transform: translateY(-2px); }
+        .btn-filled { background: var(--primary); color: var(--bg-dark); border: none; }
+        .btn-filled:hover { background: #0ea5e9; color: white; }
+
+        /* --- Grid & Sections --- */
+        section { padding: 5rem 10%; max-width: 1400px; margin: 0 auto; }
+        
+        .section-title { 
+            font-size: 2rem; 
+            margin-bottom: 3rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2rem; 
+        }
+
+        /* --- Glassmorphism Cards --- */
+        .card { 
+            background: var(--card-bg); 
+            padding: 2rem; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover { 
+            transform: translateY(-7px); 
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5); 
+        }
+
+        .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #fff; }
+        
+        .tech-stack { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 0.75rem; 
+            color: var(--primary); 
+            margin-bottom: 1rem; 
+            display: block; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 4px 8px;
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--secondary);
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        /* --- Skills Tags --- */
+        .skill-container { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .skill-tag { 
+            background: rgba(255,255,255,0.05); 
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            font-size: 0.9rem; 
+            transition: 0.2s;
+        }
+        .skill-tag:hover { background: var(--primary); color: var(--bg-dark); }
+
+        /* --- Footer --- */
+        footer { 
+            text-align: center; 
+            padding: 3rem; 
+            color: var(--text-muted); 
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            header { padding: 0 5%; min-height: 80vh; }
+            section { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="hero-tag">Hello, my name is</p>
+        <h1>Rajkumar R</h1>
+        <p class="subtitle">I engineer <span style="color: var(--primary);">Quantum-Resistant Blockchains</span> and <span style="color: var(--secondary);">AI Models</span>.</p>
+        <p style="max-width: 500px; color: #94a3b8; margin-bottom: 2rem;">
+            B.Tech Undergraduate specializing in Artificial Intelligence. Passionate about solving complex challenges using SVD, PCA, and Neural Networks.
+        </p>
+        <div class="btn-group">
+            <a href="#projects" class="btn btn-filled">View Projects</a>
+            <a href="https://github.com/RajkumarR2006" target="_blank" class="btn">GitHub</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p style="margin-bottom: 1rem;">
+                I am a 3rd-semester student at <strong>Amrita Vishwa Vidyapeetham</strong> (Class of 2028). My work bridges the gap between theoretical mathematics and practical application.
+            </p>
+            <p>
+                Currently, I am focused on integrating <strong>Post-Quantum Cryptography</strong> with blockchain ledgers and exploring <strong>Generative AI</strong> for legal and financial analysis.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <header style="padding:0; min-height:auto; margin-bottom:1rem; display:flex; justify-content:space-between;">
+                   <h3>Quantum Resistant Blockchain</h3>
+                   <i style="color:var(--text-muted)">2025</i>
+                </header>
+                <span class="tech-stack">Python | PQC | Falcon | SPHINCS+</span>
+                <p>Designed a secure blockchain ledger incorporating Post-Quantum Cryptography algorithms to defend against future quantum threats.</p>
+                <div class="status-badge">Accepted at IEEE IATMSI-2026</div>
+            </div>
+
+            <div class="card">
+                <h3>Perovskite Formula Prediction</h3>
+                <span class="tech-stack">ML | Data Analytics | Material Science</span>
+                <p>Developed a Machine Learning model to analyze chemical data and predict the optimal perovskite formula for maximum charge capacity.</p>
+            </div>
+
+            <div class="card">
+                <h3>AI-VERSE: Mythical Mavericks</h3>
+                <span class="tech-stack">GenAI | RAG | Finance</span>
+                <p>A financial RAG system for startup funding analysis, developed for a hackathon to assist in investment decision-making.</p>
+            </div>
+
+            <div class="card">
+                <h3>Autonomous Exploration Rover</h3>
+                <span class="tech-stack">Raspberry Pi | Python | Sensors</span>
+                <p>Built an autonomous rover that processes real-time sensor data for obstacle avoidance and path planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Languages</h3>
+                <div class="skill-container">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Machine Learning</h3>
+                <div class="skill-container">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-Learn</span>
+                    <span class="skill-tag">SVD / PCA</span>
+                    <span class="skill-tag">Neural Networks</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Tools & Platforms</h3>
+                <div class="skill-container">
+                    <span class="skill-tag">Raspberry Pi</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">AWS Cloud</span>
+                    <span class="skill-tag">Git/GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built by Rajkumar R. &copy; 2026.</p>
+        <div style="margin-top: 1rem; font-family: 'JetBrains Mono', monospace;">
+            <a href="https://www.linkedin.com/in/rajkumarr06/" style="margin: 0 10px;">LinkedIn</a> |
+            <a href="mailto:rajkumarravi2006@gmail.com" style="margin: 0 10px;">Email</a> | 
+            <a href="https://leetcode.com/u/Rajkumar_R2006/" style="margin: 0 10px;">LeetCode</a>
+        </div>
+    </footer>
+
+</body>
+</html>
