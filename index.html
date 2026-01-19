@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajkumar R | AI & Data Science Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        /* Header */
+        header { background: var(--dark); color: white; padding: 4rem 2rem; text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #94a3b8; font-size: 1.2rem; margin-bottom: 2rem; }
+        .social-links a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; padding: 8px 16px; border: 1px solid white; border-radius: 20px; transition: 0.3s; }
+        .social-links a:hover { background: white; color: var(--dark); }
+
+        /* Sections */
+        section { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        /* Cards */
+        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 0.5rem; }
+        .tech-stack { font-size: 0.85rem; color: var(--primary); margin-bottom: 1rem; display: block; }
+        
+        /* Skills Tags */
+        .tag { display: inline-block; background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.9rem; margin: 0 5px 5px 0; }
+        
+        /* Contact Footer */
+        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: white; }
+
+        @media (max-width: 600px) {
+            .social-links a { display: block; margin: 10px auto; width: fit-content; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rajkumar R</h1>
+        <p class="subtitle">Aspiring AI & Data Scientist | B.Tech Undergraduate</p>
+        <p style="max-width: 600px; margin: 0 auto 2rem auto; color: #cbd5e1;">
+            Leveraging Machine Learning, algorithms, and advanced mathematical techniques (SVD, PCA) to solve complex real-world challenges.
+        </p>
+        <div class="social-links">
+            <a href="https://github.com/RajkumarR2006" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/rajkumarr06/" target="_blank">LinkedIn</a>
+            <a href="https://leetcode.com/u/Rajkumar_R2006/" target="_blank">LeetCode</a>
+            <a href="mailto:rajkumarravi2006@gmail.com">Email Me</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        [cite_start]<p>I am a B.Tech student in <strong>Artificial Intelligence and Data Science</strong> at Amrita Vishwa Vidyapeetham (Expected 2028)[cite: 9]. I am passionate about research-driven development, particularly in blockchain security, predictive modeling, and applied mathematics.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Quantum Resistant Blockchain</h3>
+                <span class="tech-stack">Python | Post-Quantum Cryptography | Hashing</span>
+                [cite_start]<p>Designed a secure blockchain ledger incorporating Post-Quantum Cryptography (PQC) algorithms to defend against quantum computing attacks[cite: 17].</p>
+                <br>
+                <small><em>Status: Paper accepted for oral presentation at IEEE IATMSI-2026.</em></small>
+            </div>
+
+            <div class="card">
+                <h3>Perovskite Formula Prediction</h3>
+                <span class="tech-stack">Machine Learning | Data Analytics</span>
+                [cite_start]<p>Developed an ML model to analyze chemical data and predict the optimal perovskite formula for maximum charge capacity, solving material science challenges[cite: 20].</p>
+            </div>
+
+            <div class="card">
+                <h3>LLM Development</h3>
+                <span class="tech-stack">NLP | Neural Networks | PyTorch</span>
+                [cite_start]<p>Built a foundational language model capable of text processing and linguistic analysis, gaining hands-on experience with neural network architectures[cite: 23].</p>
+            </div>
+
+            <div class="card">
+                <h3>Autonomous Exploration Rover</h3>
+                <span class="tech-stack">Raspberry Pi | Python | Sensors</span>
+                [cite_start]<p>Built an autonomous rover processing real-time sensor data for obstacle avoidance and path planning[cite: 26].</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="card">
+            <h3>Languages & Tools</h3>
+            <div>
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">OpenCV</span>
+            </div>
+            <h3 style="margin-top: 1.5rem;">AI & Math</h3>
+            <div>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Neural Networks</span>
+                <span class="tag">SVD / PCA</span>
+                <span class="tag">Pseudoinverse</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul style="padding-left: 20px;">
+            [cite_start]<li><strong>AWS Cloud Practitioner</strong> - Udemy [cite: 35]</li>
+            [cite_start]<li><strong>HackerRank</strong> - Python, C, Java [cite: 32]</li>
+            [cite_start]<li><strong>Deep Learning & AI</strong> - Practical applications [cite: 33]</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rajkumar R. Built for GitHub Pages.</p>
+        [cite_start]<p>Phone: +91 9629266752 [cite: 1]</p>
+    </footer>
+
+</body>
+</html>
